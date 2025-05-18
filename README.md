@@ -28,7 +28,8 @@ solar-eda-project/
 ├── README.md              # Project documentation (this file)
 └── requirements.txt       # Python dependencies
 
----
+
+```
 
 ## 🛠️ Tools and Libraries
 
