@@ -56,7 +56,38 @@ solar-eda-project/
 
 ---
 
+## 🚀 How to Run This Project
 
+Follow the steps below to set up and run the project on your local machine:
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/metasebiya/solar-challenge-week1.git
+cd solar-challenge-week1
+# Create a virtual environment
+python -m venv venv
+
+# Activate the virtual environment
+# On Windows:
+venv\Scripts\activate
+
+# On macOS/Linux:
+source venv/bin/activate
+# Create a virtual environment
+python -m venv venv
+
+# Activate the virtual environment
+# On Windows:
+venv\Scripts\activate
+
+# On macOS/Linux:
+source venv/bin/activate
+
+pip install -r requirements.txt
+
+jupyter notebook
+```
 
 ## 👤 Author
 
