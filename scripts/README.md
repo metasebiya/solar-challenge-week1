@@ -50,6 +50,38 @@ As part of the **Solar Farm Investment Analysis – Moonlight Solar Solutions** 
    ```bash
    pip install -r requirements.txt
    ```
+## Usage
+1. **Navigate to the Streamlit Directory**
+    ```bash
+   cd app/
+   ```
+2. **Run the Streamlit App**
+    ```bash
+   streamlit run main.py
+   ```
+3. **Interact with the Dashboard**
+- Select one or more countries (Benin, Sierra Leone, Togo) in the sidebar.
+- Click the "Load Data" button to fetch and process data.
+- Explore the GHI boxplot and summary statistics table.
+- A warning message displays if no valid data is available for the selected countries.
 
+## Directory Structure
+├── app
 
-   
+│   ├── __init__.py
+
+│   ├── main.py  
+
+│   ├── utils.py  
+
+└── scripts
+
+    ├── __init__.py
+
+    └── README.md
+
+## Notes
+- **Data Source:** The dashboard relies on cleaned datasets in ../data/ and processing functions in ../app/utils.py.
+- **Caching:** Data is cached for 1 hour using @st.cache_data to optimize performance.
+- **Lazy Loading:** Data processing is triggered only when the "Load Data" button is clicked, reducing unnecessary computations.
+- **Error Handling:** A warning is shown if no valid data is available for the selected countries.
