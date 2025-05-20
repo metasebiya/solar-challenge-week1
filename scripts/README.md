@@ -27,3 +27,29 @@ As part of the **Solar Farm Investment Analysis – Moonlight Solar Solutions** 
    ```bash
    git clone https://github.com/metasebiya/solar-challenge-week1.git
    cd solar-challenge-week1
+   ```
+2. **Set Up the Virtual Environment**
+   ```bash
+   python -m venv venv
+   # On Windows:
+   venv\Scripts\activate
+   # On macOS/Linux:
+   source venv/bin/activate
+   ```
+3. **Install Dependencies**
+   ```bash
+   streamlit==1.38.0
+   pandas==2.2.2
+   plotly==5.22.0
+   numpy==1.26.4
+   matplotlib==3.8.4
+   seaborn==0.13.2
+   scipy==1.13.0
+   ```
+   ***Install them from the project root***
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+
+   
