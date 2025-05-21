@@ -4,7 +4,7 @@
 The **Solar Data Analysis Dashboard** is a Streamlit-based web application within the **Solar Farm Investment Analysis – Moonlight Solar Solutions** project. This dashboard enables interactive visualization and analysis of Global Horizontal Irradiance (GHI) data for Benin, Sierra Leone, and Togo, supporting the project’s goal of identifying high-potential regions for solar farm investment through data-driven insights.
 
 ## Role in the Parent Project
-As part of the **Solar Farm Investment Analysis – Moonlight Solar Solutions** project, this Streamlit section complements the exploratory data analysis (EDA) in the `notebooks/` directory by providing an interactive interface for stakeholders. It uses cleaned datasets from the `data/` directory and utility functions from the `scripts/` directory to deliver dynamic GHI visualizations and summary statistics, facilitating strategic decision-making.
+As part of the **Solar Farm Investment Analysis – Moonlight Solar Solutions** project, this Streamlit section complements the exploratory data analysis (EDA) in the `notebooks/` directory by providing an interactive interface for stakeholders. It uses cleaned datasets from the `data/` directory and utility functions from the `app/` directory to deliver dynamic GHI visualizations and summary statistics, facilitating strategic decision-making.
 
 ## Features
 - **Country Selection**: Choose one or more countries (Benin, Sierra Leone, Togo) via a sidebar to analyze GHI data.
@@ -19,7 +19,7 @@ As part of the **Solar Farm Investment Analysis – Moonlight Solar Solutions** 
   - `streamlit==1.38.0`
   - `pandas==2.2.2`
   - `plotly==5.22.0`
-- The `utils.py` script in `../scripts/`, containing `fetch_cleaned_data`, `process_data`, and `get_summary_stats` functions
+- The `utils.py` script in `../app/`, containing `fetch_cleaned_data`, `process_data`, and `get_summary_stats` functions
 - Cleaned datasets for Benin, Sierra Leone, and Togo in the `../data/` directory
 
 ## Installation
