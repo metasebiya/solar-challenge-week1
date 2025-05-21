@@ -66,6 +66,21 @@ As part of the **Solar Farm Investment Analysis – Moonlight Solar Solutions** 
 - Caching: Data is cached for 1 hour using @st.cache_data to optimize performance.
 - Lazy Loading: Data processing is triggered only when the "Load Data" button is clicked, reducing unnecessary computations.
 - Error Handling: A warning is shown if no valid data is available for the selected countries.
-   
+## 👤 Author
+
+- **Name**: Metasebiya Akililu
+- **GitHub**: [@metasebiya](https://github.com/metasebiya)
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
+
+## 📬 Contact
+
+For questions or feedback, please reach out via [GitHub Issues](https://github.com/metasebiya/solar-challenge-week1/issues).
   
    
