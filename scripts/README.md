@@ -61,6 +61,11 @@ As part of the **Solar Farm Investment Analysis – Moonlight Solar Solutions** 
    - Click the "Load Data" button to fetch and process data.
    - Explore the GHI boxplot and summary statistics table.
    - A warning message displays if no valid data is available for the selected countries.
+## Notes
+- Data Source: The dashboard relies on cleaned datasets in ../data/ and processing functions in ../scripts/utils.py.
+- Caching: Data is cached for 1 hour using @st.cache_data to optimize performance.
+- Lazy Loading: Data processing is triggered only when the "Load Data" button is clicked, reducing unnecessary computations.
+- Error Handling: A warning is shown if no valid data is available for the selected countries.
    
   
    
