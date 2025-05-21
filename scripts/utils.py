@@ -131,6 +131,39 @@ def detect_outliers(df, columns=None, threshold=3):
             result[col] = (outlier_count, outlier_percentage, outlier_indices)
     return result
 
+def replace_outliers_with_mean(dataframe, columns, threshold=3):
+    """Replace outliers in specified columns with the mean of non-outlier values using z-scores.
+
+    Args:
+        dataframe (pd.DataFrame): Input DataFrame containing the data.
+        columns (list): List of column names to check for outliers.
+        threshold (float, optional): Z-score threshold for identifying outliers. Defaults to 3.
+
+    Returns:
+        pd.DataFrame: DataFrame with outliers replaced by the mean of non-outlier values.
+    """
+    df = dataframe.copy()
+    for col in columns:
+        if col not in df.columns:
+            print(f"Warning: Column '{col}' not found in DataFrame. Skipping.")
+            continue
+
+        # Compute z-scores for the column
+        z_scores = zscore(df[col].dropna())
+        z_scores = pd.Series(z_scores, index=df[col].dropna().index)
+        
+        # Identify outliers (absolute z-score > threshold)
+        outlier_flags = z_scores.abs() > threshold
+        
+        # Calculate mean of non-outlier values
+        non_outlier_mean = df.loc[~outlier_flags, col].mean()
+        
+        # Replace outliers with the mean
+        df.loc[outlier_flags, col] = non_outlier_mean
+        print(f"Replaced {outlier_flags.sum()} outliers in column '{col}' with mean {non_outlier_mean:.2f}")
+    
+    return df
+
 
 def plot_outliers(df, columns=None, threshold=3, save_path=None):
     """Create scatter plots highlighting outliers for specified columns.
